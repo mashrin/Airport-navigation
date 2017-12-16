@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AeroWalk | WINGS OUT</title>
+  <link rel="shortcut icon" href="TemplateData/favicon.ico">
+  <link rel="stylesheet" href="TemplateData/style.css">
+
+
+
+  <script src="TemplateData/UnityProgress.js"></script>
+  <script src="Build/UnityLoader.js"></script>
+
+  <link rel="stylesheet" href="./login.css">
+  <script src="./assets/jquery.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="./assets/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="./assets/bs-theme.css">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="./assets/bootstrap.js"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="./styles/style.css">
+  <link rel="manifest" href="./manifest.json">
+  <!-- Add to home screen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="pwa">
+  <link rel="apple-touch-icon" href="./images/icons/icon-152x152.png">
+  <meta name="msapplication-TileImage" content="./images/icons/icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#2F3BA2">
+</head>
+
+<body>
+  <header>
+    <div id="DIV_11">
+      <div id="DIV_12">
+        <a href="javascript:void(0)" id="A_13"></a>
+      </div>
+      <!-- start: Site name and Slogan hgroup -->
+      <div style="
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    padding-right: 30px;
+">
+        <div id="logout" style="color: #ffffff; cursor: pointer"><b>LOGOUT</b></div>
+      </div>
+      <div id="DIV_14">
+        <!--<h1 id="site-name" class="element-invisible" id="site-name"><a href="/trip/" title="Home page" class="active">Vistara</a></h1>-->
+
+      </div>
+      <!-- /end #name-and-slogan -->
+
+    </div>
+  </header>
+  <div id="DIV_1">
+    <div id="DIV_2">
+      <div id="DIV_3"> <button type="button" id="BUTTON_4">
+                     <!-- <span id="SPAN_5">×</span><span id="SPAN_6">Close</span> -->
+                </button>
+        <h4 id="H4_7">
+                    Ticket Details
+                </h4> </div>
+      <div id="DIV_8">
+        <div id="DIV_9"> </div>
+        <form name="login_form" id="FORM_10">
+          <ul id="UL_11">
+            <li id="LI_12"> <input type="hidden" id="INPUT_13" value="General" />
+              <input id="INPUT_14" name="flyerid" type="text" placeholder="Email Id" required/>
+            </li>
+            <li id="LI_15">
+              <input id="INPUT_16" type="text" name="pin" maxlength="6" placeholder="PNR" required/>
+            </li>
+          </ul>
+          <br>
+          <input type="hidden" name="browserTabID" id="INPUT_17" />
+          <div id="DIV_18"> <input type="button" id="INPUT_19" value="Show" />
+            <!-- <input type="button" value="Register" id="INPUT_20" /><br id="BR_21" /><br id="BR_22" /> <a href="javascript:void(0)" id="A_23">Forgot PIN ?</a>  -->
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="content-body">
+    <div>
+      <table class="table table-bordered" style="width: 250px; position: absolute; top: 15%; left: 5%;">
+    <tbody>
+      <tr>
+        <td>Name</td>
+        <td>Rakesh Saxena</td>
+      </tr>
+      <tr>
+        <td>PNR </td>
+        <td id='pnr'>VI1234</td>
+      </tr>
+      <tr>
+        <td>Departure Terminal</td>
+        <td>T-2</td>
+      </tr>
+      <tr>
+        <td>Destination</td>
+        <td>Delhi</td>
+      </tr>
+      <tr>
+        <td>Source</td>
+        <td>Bangalore</td>
+      </tr>
+      <tr>
+        <td>Flight No.</td>
+        <td>VI745</td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <button type="button" id="checkin" class="btn btn-info btn-lg">Web Checkin</button>
+        </td>
+      </tr>
+      <!-- <tr>
+        <td>Seat No.</td>
+        <td id="seatNo"> 12 A</td>
+      </tr> -->
+    </tbody>
+  </table>
+    </div>
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <!-- <div class="webgl-logo"></div> -->
+        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+        <div class="title">
+            Click on the Simulation to Pause/Play it.
+          </div>
+      </div>
+    </div>
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg modal-class">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Seat Map</h4>
+          </div>
+          <div class="modal-body">
+            <img src="seat.png" width="100%" height="300"alt="" />
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <button type="button" class="btn btn-info btn-lg btn-class-play" id="pause" style="width:100px">Pause</button> -->
+    <button type="button" class="btn btn-info btn-lg btn-class-seatPlan" data-toggle="modal" data-target="#myModal">Seat Plan</button>
+  </div>
+  <script src="./scripts/app.js" async></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      if (localStorage.getItem('login') === "1") {
+        $('#DIV_1').hide();
+        // $('#seatNo').html(Math.ceil(Math.random()*30) + 'A');
+        var gameInstance = UnityLoader.instantiate("gameContainer", "Build/airport7.json", {
+          onProgress: UnityProgress
+        });
+      } else {
+        $('.content-body').hide();
+        $('#logout').hide();
+      }
+      $("#INPUT_19").click(function() {
+        var email = $('#INPUT_14').val();
+        var pnr = $('#INPUT_16').val();
+        if (!$('#INPUT_14').val() || !$('#INPUT_16').val()) {
+          alert('Please fill in all details.');
+          return;
+        }
+        $('#pnr').html(pnr || localStorage.getItem('pnr'));
+        // $('#seatNo').html(Math.ceil(Math.random()*30));
+        $.ajax({
+          type: "GET",
+          url: "https://sims3.knolskape.com/airport/public/?email=" + email + "&pnr=" + pnr,
+          success: function(data) {
+            $('.content-body').show();
+            $('#logout').show();
+            $('#DIV_1').hide();
+            var gameInstance = UnityLoader.instantiate("gameContainer", "Build/airport7.json", {
+              onProgress: UnityProgress
+            });
+            localStorage.setItem('login', 1);
+            localStorage.setItem('pnr', 1);
+            console.log(data);
+          }
+        });
+      });
+      $("#logout").click(function() {
+        localStorage.setItem('login', 0);
+        $('.content-body').hide();
+        $('#logout').hide();
+        $('#DIV_1').show();
+        $('#INPUT_14').val('');
+        $('#INPUT_16').val('');
+      });
+      var i = 0;
+      $('#pause').click(function($e) {
+        i++;
+        if (i % 2 != 0) {
+          $('#pause').text('Play');
+        } else {
+          $('#pause').text('Pause');
+        }
+        $('#gameContainer').click();
+      });
+      $('#checkin').click(function($e) {
+        window.open('https://www.airvistara.com/trip/#check-in');
+      });
+    });
+  </script>
+</body>
+
+</html>
