@@ -12,5 +12,3 @@ Developed at Vistara Hackathon, Bengaluru in Nov '17. The project provides the u
 [Bhanu Shukla](https://github.com/bhanushukla)
 
 Karthik Singh
-
- #### Build version is [here](https://github.com/himanshusingh2407/AeroWalk)
